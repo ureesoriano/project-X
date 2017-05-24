@@ -24,7 +24,7 @@ OAUTH_GOOGLE_SECRET   ?= ''
 
 # Database Credentials
 DB_HOST ?= postgresql
-DB_USER ?= ''
+DB_USER ?= 'postgres'
 DB_PASS ?= ''
 
 # Path Calculations
