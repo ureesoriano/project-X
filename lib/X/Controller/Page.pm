@@ -11,4 +11,10 @@ sub about($c) {
   # ... something with $c (controller) ?
 }
 
+use Mojo::Pg;
+
+sub add_user($c) {
+    my $res = $c->pg->db->insert('users', {email => 'john@smith.com'});
+}
+
 1;

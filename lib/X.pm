@@ -15,6 +15,7 @@ sub setup_routes($app) {
     my $auth = $r->under('/')->to('auth#logged_in');
     my $anon = $r->under('/')->to('auth#not_logged_in');
 
+    $r->get('/add_user')->to('page#add_user')->name('add_user');
     $r->get('/')->to('page#home')->name('home');
 
     $anon->get('/signin')->to('auth#signin');
