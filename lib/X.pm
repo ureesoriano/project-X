@@ -56,6 +56,7 @@ sub setup_helpers {
     my $app = shift;
 
     $app->helper( 'user_email' => sub { shift->session( 'email', shift//() ) } );
+    $app->helper( 'pg' => sub { state $pg = Mojo::Pg->new('postgres://postgres@postgresql:5432/projectx') } );
 }
 
 1;
